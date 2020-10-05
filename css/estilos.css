@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .body-index {
     height: 100%;
     display:flex;
@@ -24,8 +29,7 @@ width: 50%;
     -webkit-box-shadow: 0px -2px 18px 14px rgba(52,58,64,0.18);
     -moz-box-shadow: 0px -2px 18px 14px rgba(52,58,64,0.18);
     box-shadow: 0px -2px 18px 14px rgba(52,58,64,0.18);
-    width: 100%;
-    max-width: 330px;
+        width: 330px;
     padding: 30px;
     margin:auto;
     border-radius: 10px;
@@ -60,15 +64,54 @@ footer{
 }
 
 @media screen and (max-width: 950px) {
-    
-        
-       
+    .body-index, .gold{
+        flex-direction: column;
     }
+    .body-index .img-hombre,.body-index form{
+        width: 90% ;
+        margin: 0 auto;
+    }
+    .img-hombre {
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+      margin-left: 0 !important;
+      margin: 0 auto;
+      /* display: flex; */
+      /* justify-content: center; */
+      /* text-align: center; */
+      margin: 0 auto !important;
+      margin-bottom: 30px !important;
+        
+    }
+
+    
+
+
+}
+@media screen and (max-width: 750px) {
+  header .menu-contenedor {
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 32px;
+    margin-left: 32px;
+
+}
+  
+}
+
 
     /*---------------------------CSS RESERVAS-------------------------------------------------*/
     .body-reservas{
         /* Location of the image */
     background-image: url(../img/background-full.jpg);
+    padding: 50px 0;
+    padding-top: 0;
+    width: 100%;
+
+    text-align: center;
     
     /* Image is centered vertically and horizontally at all times */
     background-position: center center;
@@ -109,7 +152,6 @@ footer{
   
   header .menu-contenedor {
       display: flex;
-      flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;	
       margin-right: 32px;
@@ -160,38 +202,36 @@ footer{
   .contenedor-form button{
       width:200px; 
   }
-  
+hr{
+  margin: 0 auto;
+}
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -0px; 
+    margin-left: 0px; 
+}
+.rightj{
+
+  margin-bottom: 15px;
+} 
+.rightj:nth-child(3), .rightj:nth-child(6){
+  margin-right: 0px;
+} 
   
   
   @media screen and (max-width: 480px) {
-      header {
-          flex-direction: column;
-          justify-content: center;
-      }
-      header .menu-contenedor {
-          flex-direction: column;
-          margin: 0;
-          text-align: center;
-      }
-      header .menu-contenedor a {
-          margin: 0 0 0 0;
-      }
-  
-      header .logo-contenedor {
-          margin-left: 0;
-      }
-  
-      header img{
-          display: none;
-      }
-  
-      .contenedor{
-          margin-left: 0;
+      .links{
+        display: flex;
+        flex-direction: column;
       }
   }
   /*---------------------------CSS PRECIOS-------------------------------------------------*/
   .body-precios{
-      height: 210px;
+      padding: 30px 0 ;
+      padding-top: 0 ;
       width: 100%;
     /* Location of the image */
 background-image: url(../img/sea.jpg);
@@ -229,8 +269,9 @@ background-color:#f5f5f5;
   /*---------------------------CSS PROMOCIONES-------------------------------------------------*/
 
   .body-promociones{
-    height: 210px;
     width: 100%;
+    padding: 30px 0;
+    padding-top: 0;
   /* Location of the image */
 background-image: url(../img/sunset.jpg);
 
@@ -264,7 +305,7 @@ background-color:#f5f5f5;
     
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;	
+    justify-content: space-evenly;	
     margin-right: 32px;
     margin-left: 32px;
   }
@@ -287,10 +328,11 @@ background-color:#f5f5f5;
 
 .body-tarjeta{
     
-    height: 210px;
+    padding: 50px 0;
+    padding-top: 0;
     width: 100%;
   /* Location of the image */
-background-image: url(../img/gold.jpg);
+background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),url(../img/gold.jpg);
 
 /* Image is centered vertically and horizontally at all times */
 background-position: center center;
